@@ -1,5 +1,5 @@
 .App {
-  background-color: rgb(207, 207, 207);
+  background-color: rgb(15, 15, 15);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -8,6 +8,13 @@
   font-size: calc(10px + 2vmin);
 }
 
+
+
 .App-logo {
   height: 85px;
+}
+
+.App-banner {
+  width: 95vw;
+  margin-top: 10px;
 }
