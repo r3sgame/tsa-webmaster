@@ -44,14 +44,12 @@ export default function Home() {
         <Typography variant='p'>GalactEcks is the nation's largest provider of space tourism. Book your first (or next) interstellar voyage with us, and join a family of over 500K budding astronauts!</Typography>
     </Paper>
 
-    <br/>
-    <Typography variant='h5'>Our Legacy</Typography>
+    <Typography variant='h5' sx={{marginTop: 2.5}}>Our Legacy</Typography>
     <Paper sx={{ width: '60%', p: 2.5, flexDirection: 'row', overflow: 'auto'}}>
         <Typography variant='p'>Founded in 2023, John Robertson had one goal: to ignite a common interest in space. To do this, he realized that space tourism needed to be accessible to every citizen. That's why GalactEcks ensures convenience and affordability at every step.</Typography>
     </Paper>
 
-    <br/>
-    <Typography variant='h5'>Our Ships</Typography>
+    <Typography variant='h5' sx={{marginTop: 2.5}}>Our Ships</Typography>
     <Paper sx={{ width: '60%', p: 2.5, flexDirection: 'row', overflow: 'auto'}}>
         <Typography variant='p'>GalactEcks' vehicles are designed to be just as efficient and convenient as the service. Using environmentally-friendly state-of-the-art technology, our ships provide a comfortable experience at every price point.</Typography>
         
@@ -72,10 +70,9 @@ export function Catalog() {
     </Paper>
 
     {!isMobile && <React.Fragment>
-      <br/>
-      <Typography id="Header" variant='h5'>Featured</Typography>
+      <Typography id="Header" variant='h5' sx={{marginTop: 2.5 }}>Featured</Typography>
       <Card sx={{ display: 'flex', width: '62.5%', minHeight: 150 }}>
-        <CardMedia component="img" sx={{ width: '100%', maxHeight: 300 }} image={Standard} alt="Vehicle"/>
+        <CardMedia component="img" sx={{ width: '100%', maxHeight: 200 }} image={Standard} alt="Vehicle"/>
         <Box sx={{ display: 'flex', flexDirection: 'column' }}>
   
           <CardContent sx={{ flex: '1 0 auto' }}>
@@ -91,9 +88,7 @@ export function Catalog() {
       </Card>
   
       
-  
-      <br/>
-      <Card sx={{ display: 'flex', width: '62.5%', minHeight: 150 }}>
+      <Card sx={{ display: 'flex', width: '62.5%', minHeight: 150, marginTop: 2.5  }}>
         <CardMedia component="img" sx={{ width: '100%', maxHeight: 300  }} image={Private} alt="Vehicle"/>
         <Box sx={{ display: 'flex', flexDirection: 'column' }}>
   
@@ -109,8 +104,8 @@ export function Catalog() {
         </Box>
       </Card>
   
-      <br/>
-      <Typography id="Header" variant='h5'>Other Options</Typography>
+
+      <Typography id="Header" variant='h5' sx={{marginTop: 2.5 }}>Other Options</Typography>
       <Card variant='outline' sx={{ display: 'flex', width: '62.5%', minHeight: 150 }}>
         <CardMedia component="img" sx={{ width: '50%', maxHeight: 150 }} image={Fast} alt="Vehicle"/>
         <Box sx={{ display: 'flex', flexDirection: 'column' }}>
@@ -127,8 +122,7 @@ export function Catalog() {
         </Box>
       </Card>
   
-      <br/>
-      <Card variant='outline' sx={{ display: 'flex', width: '62.5%', minHeight: 150 }}>
+      <Card variant='outline' sx={{ display: 'flex', width: '62.5%', minHeight: 150, marginTop: 2.5 }}>
         <CardMedia component="img" sx={{ width: '50%', maxHeight: 150  }} image={Economy} alt="Vehicle"/>
         <Box sx={{ display: 'flex', flexDirection: 'column' }}>
   
@@ -146,8 +140,7 @@ export function Catalog() {
     </React.Fragment>}
 
     {isMobile && <React.Fragment>
-      <br/>
-      <Typography id="Header" variant='h5'>Featured</Typography>
+      <Typography id="Header" variant='h5' sx={{marginTop: 2.5}}>Featured</Typography>
       <Card sx={{ maxWidth: '80%' }}>
       <CardMedia
         sx={{ height: 140 }}
@@ -164,8 +157,7 @@ export function Catalog() {
       </CardContent>
     </Card>
 
-    <br/>
-      <Card sx={{ maxWidth: '80%' }}>
+    <Card sx={{ maxWidth: '80%', marginTop: 2.5 }}>
       <CardMedia
         sx={{ height: 140 }}
         image={Private}
@@ -181,11 +173,9 @@ export function Catalog() {
       </CardContent>
     </Card>
 
-    <br/>
-      <Typography id="Header" variant='h5'>Other Options</Typography>
+      <Typography sx={{marginTop:2.5}} id="Header" variant='h5'>Other Options</Typography>
 
-      <br/>
-      <Card sx={{ maxWidth: '80%' }}>
+      <Card sx={{ maxWidth: '80%', marginTop: 2.5 }}>
       <CardMedia
         sx={{ height: 140 }}
         image={Fast}
@@ -201,8 +191,7 @@ export function Catalog() {
       </CardContent>
     </Card>
 
-    <br/>
-      <Card sx={{ maxWidth: '80%' }}>
+      <Card sx={{ maxWidth: '80%', marginTop: 2.5 }}>
       <CardMedia
         sx={{ height: 140 }}
         image={Economy}
@@ -228,8 +217,25 @@ export function Pricing() {
     <Typography id="Header" variant='h5' sx={{marginTop: 10}}>Pricing</Typography>
 
     <Paper sx={{ width: '60%', p: 2.5, flexDirection: 'row', overflow: 'auto'}}>
-        <Typography variant='p'>Get familiar with our lineup of trusted vehicles! We supply shuttles, rockets, and everything in between. Your ride will depend on selected price plans and routes.</Typography>
+        <Typography variant='p'>GalactEcks strives to provide affordable adventures for everyone. Check out our price tiers here, or consider a specialty plan!</Typography>
     </Paper>
+
+    <Card sx={{ display: 'flex', width: '62.5%', minHeight: 150, marginTop: 2.5 }}>
+        <CardMedia component="img" sx={{ width: '100%', maxHeight: 300  }} image={Private} alt="Vehicle"/>
+        <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+  
+          <CardContent sx={{ flex: '1 0 auto' }}>
+            <Typography component="div" variant="h5">
+              Business Cruiser
+            </Typography>
+            <Typography variant="h6" color="text.secondary" component="div">
+              Looking to maximize your enjoyment? The business cruiser is a private ship featuring 24 chambers, a personal crew, and luxurious accomodations, including premium food, drinks, activities, and comfort (Suited for 1 party).
+            </Typography>
+          </CardContent>
+          
+        </Box>
+      </Card>
+    
     </React.Fragment>);
 }
 
