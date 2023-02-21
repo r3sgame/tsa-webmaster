@@ -7,7 +7,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { Drawer, List, ListItem, Divider,  ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
 import {AirplanemodeActiveTwoTone, ArrowBackIosNewTwoTone, ArticleTwoTone, HomeTwoTone, LocalOfferTwoTone, MenuTwoTone, RouteTwoTone} from '@mui/icons-material';
 
-import Home, { Catalog, Guidelines, Pricing } from './Pages';
+import Home, { Catalog, Guidelines, Pricing, Routing } from './Pages';
 
 import React, {useState} from 'react';
 import {
@@ -15,6 +15,8 @@ import {
 } from 'react-router-dom';
 
 import { isMobile } from "react-device-detect";
+
+import Footer from './Footer.png'
 
 function App() {
   const theme = createTheme({
@@ -27,29 +29,42 @@ function App() {
         main: '#844de4',
       },
       neutral: {
-        main: '#f50057',
+        main: '#f50000',
       },
     },
     typography: {
       h4: {
         color: 'white',
-        fontFamily: "'Sono', sans-serif;",
+        fontFamily: "'Kanit', sans-serif;",
         marginBottom: 10
       },
       h5: {
         color: 'white',
-        fontFamily: "'Sono', sans-serif;",
+        fontFamily: "'Kanit', sans-serif;",
         marginBottom: 10
       },
       h6: {
         color: 'white',
-        fontFamily: "'Sono', sans-serif;",
+        fontFamily: "'Ubuntu', sans-serif;",
         marginBottom: 10,
       },
       p: {
-        fontFamily: "'Poppins', sans-serif;",
+        fontFamily: "'Ubuntu', sans-serif;",
         marginBottom: 10,
         fontSize: 17.5,
+        color: 'white'
+      },
+      subtitle1: {
+        fontFamily: "'Kanit', sans-serif;",
+        marginTop: 10,
+        color: '#11ff00',
+        fontSize: 25,
+      },
+      subtitle2: {
+        fontFamily: "'Kanit', sans-serif;",
+        marginTop: 10,
+        color: '#f50000',
+        fontSize: 25,
       },
     },
   });
@@ -205,12 +220,13 @@ function App() {
     <Route path="/" exact element={<Home/>} />
     <Route path="/catalog" exact element={<Catalog/>} />
     <Route path="/pricing" exact element={<Pricing/>} />
-    <Route path="/routes" exact element={<Routes/>} />
+    <Route path="/routes" exact element={<Routing/>} />
     <Route path="/guidelines" exact element={<Guidelines/>} />
 
     <Route path="*" element={<Navigate to="/" replace />} />
 </Routes>
 </BrowserRouter>
+<img src={Footer} alt='Footer' className='App-footer'/>
 </ThemeProvider>
     </div>
   );
